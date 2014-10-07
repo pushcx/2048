@@ -46,6 +46,10 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
+HTMLActuator.prototype.log2 = function (value) {
+  return Math.log(value) / Math.LN10;
+};
+
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
@@ -62,7 +66,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  inner.textContent = self.log2(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
