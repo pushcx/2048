@@ -378,12 +378,29 @@ hr {
 
 .tile {
   position: absolute;
-  -webkit-transition: 100ms ease-in-out;
-  -moz-transition: 100ms ease-in-out;
-  transition: 100ms ease-in-out;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform; }
+.score-start .tile {
+  -webkit-transition: 80ms ease-in-out;
+  -moz-transition: 80ms ease-in-out;
+  transition: 80ms ease-in-out;
+}
+.score-low .tile {
+  -webkit-transition: 60ms ease-in-out;
+  -moz-transition: 60ms ease-in-out;
+  transition: 60ms ease-in-out;
+}
+.score-mid .tile {
+  -webkit-transition: 30ms ease-in-out;
+  -moz-transition: 30ms ease-in-out;
+  transition: 30ms ease-in-out;
+}
+.score-high .tile {
+  -webkit-transition: 15ms ease-in-out;
+  -moz-transition: 15ms ease-in-out;
+  transition: 15ms ease-in-out;
+}
   .tile .tile-inner {
     border-radius: 3px;
     background: #eee4da;

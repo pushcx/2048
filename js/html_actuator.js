@@ -23,6 +23,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
     });
 
     self.updateScore(metadata.score);
+    self.speedAnimation(metadata.score);
     self.updateBestScore(metadata.bestScore);
 
     if (metadata.terminated) {
@@ -53,6 +54,15 @@ HTMLActuator.prototype.clearContainer = function (container) {
 
 HTMLActuator.prototype.log2 = function (value) {
   return Math.floor(Math.log(value) / Math.log(2));
+};
+
+HTMLActuator.prototype.speedAnimation = function (score) {
+  var range = "start";
+  if (score >=  1792) { range = "low"; }   // have a 2^8: 256 tile
+  if (score >=  9216) { range = "mid"; }   // have a 2*10: 1024 tile
+  if (score >= 20480) { range = "high"; }  // have a 2*11: 2048 tile
+  var classes = ["tile-container", "score-" + range];
+  this.applyClasses(this.tileContainer, classes);
 };
 
 HTMLActuator.prototype.addTile = function (tile) {
