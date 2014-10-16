@@ -8,7 +8,7 @@ html, body {
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 8px 0; }
 
 input {
   display: inline-block;
@@ -565,8 +565,8 @@ hr {
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
 
-.above-game:after {
-  content: "";
+.below-game {
+  margin-top: 20px;
   display: block;
   clear: both; }
 
@@ -590,7 +590,8 @@ hr {
   float: right; }
 
 .game-explanation {
-  margin-top: 50px; }
+  clear: both;
+  margin-top: 60px; }
 
 .sharing {
   margin-top: 20px;
@@ -608,8 +609,7 @@ hr {
     padding: 20px; }
 
   h1.title {
-    font-size: 27px;
-    margin-top: 15px; }
+    font-size: 27px; }
 
   .container {
     width: 280px;
