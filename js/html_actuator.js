@@ -3,7 +3,6 @@ function HTMLActuator() {
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
-  this.sharingContainer = document.querySelector(".score-sharing");
 
   this.score = 0;
 }
@@ -154,8 +153,6 @@ HTMLActuator.prototype.message = function (won) {
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 
-  this.clearContainer(this.sharingContainer);
-  this.sharingContainer.appendChild(this.scoreTweetButton());
   twttr.widgets.load();
 };
 
