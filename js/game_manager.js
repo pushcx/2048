@@ -49,7 +49,7 @@ GameManager.prototype.setup = function () {
     this.over        = false;
     this.won         = false;
     this.keepPlaying = false;
-    this.startFrom   = Math.pow(2, 11);
+    //this.startFrom   = Math.pow(2, 11);
 
     // Add the initial tiles
     this.addStartTiles();
