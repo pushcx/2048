@@ -22,7 +22,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
     });
 
     self.updateScore(metadata.score);
-    self.speedAnimation(metadata.score);
+    self.speedAnimation(metadata.bestScore);
     self.updateBestScore(metadata.bestScore);
 
     if (metadata.terminated) {
