@@ -9,3 +9,5 @@ namespace :appcache do
     File.write("cache.appcache", appcache.sub(/^# Updated:.*$/, updated))
   end
 end
+
+task :default => 'appcache:update'

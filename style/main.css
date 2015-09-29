@@ -489,7 +489,7 @@ hr {
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
+    -moz-transform: scale(2);
     transform: scale(1); } }
 @keyframes appear {
   0% {
@@ -503,6 +503,7 @@ hr {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
+/* .score-start case */
 .tile-new .tile-inner {
   -webkit-animation: appear 200ms ease 100ms;
   -moz-animation: appear 200ms ease 100ms;
@@ -510,6 +511,21 @@ hr {
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
+.score-low .tile-new .tile-inner {
+  -webkit-animation: appear 150ms ease 75ms;
+  -moz-animation: appear 150ms ease 75ms;
+  animation: appear 150ms ease 75ms;
+}
+.score-mid .tile-new .tile-inner {
+  -webkit-animation: appear 100ms ease 50ms;
+  -moz-animation: appear 100ms ease 50ms;
+  animation: appear 100ms ease 50ms;
+}
+.score-high .tile-new .tile-inner {
+  -webkit-animation: appear 50ms ease 15ms;
+  -moz-animation: appear 50ms ease 15ms;
+  animation: appear 50ms ease 15ms;
+}
 
 @-webkit-keyframes pop {
   0% {
@@ -556,6 +572,7 @@ hr {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); } }
+/* .score-start case */
 .tile-merged .tile-inner {
   z-index: 20;
   -webkit-animation: pop 200ms ease 100ms;
@@ -564,6 +581,66 @@ hr {
   -webkit-animation-fill-mode: backwards;
   -moz-animation-fill-mode: backwards;
   animation-fill-mode: backwards; }
+@-webkit-keyframes pop-low {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+@-moz-keyframes pop-low {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+@keyframes pop-low {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(112);
+    transform: scale(1.1); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1); } }
+.score-low .tile-merged .tile-inner {
+  -webkit-animation: pop-low 150ms ease 75ms;
+  -moz-animation: pop-low 150ms ease 75ms;
+  animation: pop-low 150ms ease 75ms;
+}
+.score-mid .tile-new .tile-inner {
+  -webkit-animation: pop 100ms ease 50ms;
+  -moz-animation: pop 100ms ease 50ms;
+  animation: pop 100ms ease 50ms;
+}
+.score-high .tile-new .tile-inner {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
 
 .below-game {
   margin-top: 20px;
